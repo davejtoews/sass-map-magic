@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "sass:meta";
+
 @function subtract($set1, $set2, $calc: false) {
     @if (meta.type-of($set1) == 'map') {
         @return _subtract-set-values($set1, $set1, $set2, $calc);
