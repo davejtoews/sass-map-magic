@@ -1,0 +1,25 @@
+{
+    "name": "sass-map-magic",
+    "version": "0.0.1",
+    "description": "Handy sass functions for working with map values",
+    "sass": "_index.scss",
+    "style": "_index.scss",
+    "keywords": [
+        "scss",
+        "sass",
+        "maps"
+    ],
+    "author": "Dave Toews <davejtoews@gmail.com> (http://davejtoews.com)",
+    "license": "MIT",
+    "peerDependencies": {
+        "sass": "^1.32.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/davejtoews/sass-map-magic.git"
+    },
+    "bugs": {
+        "url": "https://github.com/davejtoews/sass-map-magic/issues"
+    },
+    "homepage": "https://github.com/davejtoews/sass-map-magic#readme"
+}
