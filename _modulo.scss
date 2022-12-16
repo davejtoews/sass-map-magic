@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "sass:meta";
+
+@function modulo($set1, $set2) {
+    @if (meta.type-of($set1) == 'map') {
+        @return _modulo-set-values($set1, $set1, $set2, $calc);
+    } @else if (meta.type-of($set2) == 'map') {
+        @return _modulo-set-values($set2, $set1, $set2, $calc);
+    } @else {
+        @return $set1 % $set2;
+    }
+}
+
+@function _modulo-set-values($keys, $set1, $set2) {
+    $map: ();
+
+    @each $key, $value in $keys {
+        $value-set1: $set1;
+        @if (meta.type-of($set1) == 'map') {
+            $value-set1: map.get($set1, $key)
+        }
+
+        $value-set2: $set2;
+        @if (meta.type-of($set2) == 'map') {
+            $value-set2: map.get($set2, $key)
+        }
+        $map: map.set($map, $key, $value-set1 % $value-set2);
+    }
+
+    @return $map;
+}

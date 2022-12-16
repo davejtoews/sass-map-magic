@@ -1,6 +1,6 @@
 {
     "name": "sass-map-magic",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Handy sass functions for working with map values",
     "sass": "_index.scss",
     "style": "_index.scss",

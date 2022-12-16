@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "sass:map";
 @use "sass:meta";
 
@@ -10,7 +11,7 @@
         @if $calc {
             @return calc(#{$set1} / #{$set2});
         }
-        @return $set1 / $set2;
+        @return math.div($set1, $set2);
     }
 }
 
@@ -30,7 +31,7 @@
         @if $calc {
             $map: map.set($map, $key, calc(#{$value-set1} / #{$value-set2}));
         } @else {
-            $map: map.set($map, $key, $value-set1 / $value-set2);
+            $map: map.set($map, $key, math.div($value-set1, $value-set2));
         }
     }
 
